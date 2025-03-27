@@ -1,112 +1,74 @@
-
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
+    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 20px;
+    background: #f0f2f5;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .container {
-    background: #fff;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
+    background: rgb(195, 181, 239);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     width: 100%;
+    max-width: 600px;
 }
 
 h1 {
-    font-size: 2rem;
-    color: #2c3e50;
-    margin-bottom: 0.5rem;
-}
-
-p {
-    font-size: 1rem;
-    color: #7f8c8d;
-    margin-bottom: 1.5rem;
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .inner-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    margin-bottom: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
 }
 
 textarea, .output-box {
-    width: 100%;
+    flex: 1;
     height: 150px;
-    padding: 0.5rem;
-    margin-right: 10px;
-    border: 2px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
-    resize: none;
-    transition: border-color 0.3s ease;
-}
-
-textarea:focus {
-    border-color: #3498db;
-    outline: none;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
 }
 
 .output-box {
-   
-    overflow-wrap: break-word;
-    overflow-y: auto; 
-    word-break: break-all; 
+    background: #f8f9fa;
+    overflow-y: auto;
 }
 
 .radio-options {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .radio-options label {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    cursor: pointer;
+    margin-right: 1rem;
 }
 
 .features {
-    border: 2px solid #ddd;
-    border-radius: 5px;
-    padding: 1rem;
-    margin-bottom: 1.5rem;
-}
-
-.features legend {
-    font-weight: bold;
-    color: #2c3e50;
+    margin-bottom: 1rem;
 }
 
 .features label {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 0.5rem;
+    margin-right: 1rem;
 }
 
 .submit-btn {
     width: 100%;
-    padding: 1rem;
-    background-color: #3498db;
-    color: #fff;
+    padding: 10px;
+    background: #007bff;
+    color: white;
     border: none;
-    border-radius: 5px;
-    font-size: 1rem;
+    border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 .submit-btn:hover {
-    background-color: #2980b9;
+    background: #0056b3;
 }

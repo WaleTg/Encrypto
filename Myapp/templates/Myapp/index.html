@@ -4,34 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Encryption Webpage</title>
+    <title>Encryption Tool</title>
     <link rel="stylesheet" href="{% static 'mainapp/styles.css' %}">
-    <script src="{% static 'mainapp/index.js' %}" defer></script>
 </head>
 <body>
     <div class="container">
-        <h1>Encryption & Decryption Tool</h1>
-        <div class="inner-container">
-            <textarea id="grid-1" placeholder="Type your text here..."></textarea>
-            <div id="grid-2" class="output-box"></div>
-        </div>
+        <h1>Encryption & Decryption</h1>
         <form action="" method="post">
             {% csrf_token %}
-            <div class="radio-options">
-                <input type="radio" id="OTP" name="selection" class="method">
-                <label for="OTP">OTP</label>
-                <input type="radio" id="3DES" name="selection" class="method">
-                <label for="3DES">3DES</label>
-                <input type="radio" id="AES" name="selection" class="method">
-                <label for="AES">AES</label>
+            <div class="inner-container">
+                <textarea id="grid-1" placeholder="Input text"></textarea>
+                <div id="grid-2" class="output-box"></div>
             </div>
-            <fieldset class="features">
-                <legend>Select an operation:</legend>
-                <label><input type="checkbox" id="encrypt" name="scales" checked> Encrypt</label>
-                <label><input type="checkbox" id="decrypt" name="horns"> Decrypt</label>
-            </fieldset>
-            <input type="submit" value="Submit" class="submit-btn">
+
+            <div class="radio-options">
+                <label><input type="radio" id="OTP" name="selection" class="method"> OTP</label>
+                <label><input type="radio" id="3DES" name="selection" class="method"> 3DES</label>
+                <label><input type="radio" id="AES" name="selection" class="method"> AES</label>
+            </div>
+
+            <div class="features">
+                <label><input type="checkbox" id="encrypt" checked> Encrypt</label>
+                <label><input type="checkbox" id="decrypt"> Decrypt</label>
+            </div>
+
+            <input type="submit" value="Process" class="submit-btn">
         </form>
     </div>
+    <script src="{% static 'mainapp/index.js' %}"></script>
 </body>
 </html>
